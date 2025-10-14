@@ -23,7 +23,7 @@ export default function NetworkGraph() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const nodesRef = useRef<Node[]>([]);
   const connectionsRef = useRef<Connection[]>([]);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
   const mouseRef = useRef({ x: -1000, y: -1000, touching: false });
   const lastFrameTime = useRef<number>(0);
   const [isMobile, setIsMobile] = useState(false);
